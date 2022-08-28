@@ -1,0 +1,163 @@
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Poppins', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg-color: #f2f2b8;
+    --color1:#FEFEEA;
+    --color2: #F4F4AA;
+    --color3: #94948A;
+    --color4: #F1E470;
+    --color5: #dfdf60;
+}
+
+body{
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif; 
+    min-width: max(fit-content,400px);
+}
+
+.container{
+    /* margin: 0 auto; */
+    background-color: var(--color4);
+    /* position: absolute; */
+    /* background-color: black; */
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    /* max-height: 100px; */
+    /* max-width: asdasdadasdad; */
+    /* min-width: fit-content; */
+    min-width: max(fit-content,400px);
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    
+}
+
+			
+input{
+    font-family: 'Poppins', sans-serif; 
+    padding: 0.5rem;
+    background-color: transparent;
+    border-radius: 0.8rem;
+    border: 2px solid ;
+    /* color: var(--color3); */
+    /* text-decoration: bold; */
+}
+
+/* input:hover{
+    background-color: var(--color2);
+} */
+
+input:focus ~ label, 
+input:not(:placeholder-shown) ~ label,
+input:not(:focus)~ label
+{
+    /* border-color: var(--color3); */
+    top:-1.1rem;
+    font-size: 1rem;
+    background-color: var(--color4);
+}
+input:placeholder-shown~ label{
+    top:0rem;
+    font-size: 1rem;
+}
+
+/* input:not(:focus){
+
+} */
+/* input:active{
+    border-color: red;
+    background-color: black;
+}
+input::enabled{
+    border-color: red;
+    background-color: black;
+} */
+label{
+    position: relative;
+    /* top:2rem;
+    left: 35rem; */
+    left: -11rem;
+    /* padding: 0 0 1rem; */
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+::placeholder{
+    color: var(--color4);
+}
+
+/* .add-task-btn{
+    background-color: aqua;
+    color: rebeccapurple;
+} */
+button{
+    border-radius: 5px;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    transition: 0.8s;
+    background-color: var(--color4);
+    margin-left: 1rem;
+}
+
+button:hover{
+    /* background-color: var(--color3); */
+
+    position:relative;
+    /* font-size: 1.8rem; */
+    transition: 0.8s;
+    box-shadow: -5px 5px 5px 0;
+    transform: rotate(90deg);
+}
+
+#toDoContainer{
+    position:relative;
+    background-color: var(--color4);
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1rem;
+    /* border-radius: 1.5rem; */
+}
+.pay{
+    display:none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#go-back:hover{
+    transform: rotate(-15deg);
+}
+footer{
+    position:absolute;
+    bottom: 0%;
+    background-color: red;
+    width: 100vw;
+    height: fit-content;
+    padding: 0.5rem;
+    background-color: var(--color5);
+    margin-top: 1rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
